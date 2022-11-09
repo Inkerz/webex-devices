@@ -20,8 +20,8 @@
 
 5-Import and Save each of the following Macros into the Room System: jibbWebexXapi.js and  jibb.js .
 
-6-Edite jibb.js by adding your personal Jibb Api Key to in line 233.
+6-Edite jibb.js by adding your personal Jibb Api Key to in line 233, to get your Api key visit https://app.jibb.ai/ then navigate to personal settings and click Generate.
 
-7- save and activate jibb.js .
+7-Save and activate jibb.js .
 
 8-After refreshing the webage you will find jibb_Storage file has been automatically added in Macro Editor and jibb panle in the UI Extension Editor.

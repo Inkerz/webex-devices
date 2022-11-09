@@ -230,7 +230,7 @@ async function main() {
 	})
 }
 
-let config = new Config("a554c70c-d3a6-495c-a823-881d95f8ede1")
+let config = new Config("yourApiKey")
 
 var meetingId = ""
 
