@@ -12,7 +12,7 @@
 
 1-downalod and unzip.
 
-2-Get  jibbWebexXapi.js from "www.s3.*******.com" for latest jibb sdk or use the one jibbjssdk folder (could be out of date).   
+2-Get  jibbWebexXapi.js from "www.s3.*******.com" for latest jibb sdk or you could use the file in jibbjssdk folder (could be out of date).   
 
 3-Log into your Cisco Room Device as and admin.
 
