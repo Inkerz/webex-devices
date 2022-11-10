@@ -24,4 +24,4 @@
 
 7-Save and activate jibb.js .
 
-8-After refreshing the webage you will find jibb_Storage file has been automatically added in Macro Editor and jibb panle in the UI Extension Editor.
+8-After refreshing the webage you will find jibb_Storage file has been automatically added in Macro Editor and jibb panel in the UI Extension Editor.
