@@ -29,7 +29,7 @@ async function generateMeetingLink() {
 
 	meetingId = await MeetingAPI.createMeeting({ title: title, isTemporary: true })
 
-	let url = `${config.webURL}/workspace/${meetingId}?user_token=${userToken}`
+	let url = `${config.webURL}/remote/${meetingId}?user_token=${userToken}`
 	return url
 }
 
