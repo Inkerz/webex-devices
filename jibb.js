@@ -3,7 +3,7 @@ import * as JIBB from "./jibb_WebexXapi"
 
 let MeetingAPI = JIBB.Meeting
 let Auth = JIBB.Auth
-let EventBus = new JIBB.EventBus()
+let EventBus = JIBB.EventBus
 
 const SurfaceType = {
 	PAPER: "PAPER",
@@ -26,6 +26,7 @@ async function generateMeetingLink() {
 		title = "webex"
 	}
 	let userToken = await Auth.getUserToken()
+
 	meetingId = await MeetingAPI.createMeeting({ title: title, isTemporary: true })
 
 	let url = `${config.webURL}/workspace/${meetingId}?user_token=${userToken}`
@@ -45,7 +46,7 @@ async function autoStartMeeting() {
 
 	let cameraList = await EventBus.getCameraList(clinetID)
 
-	let meetingToken = await MeetingAPI.getMeetingToken(meetingId, "write")
+	let meetingToken = await MeetingAPI.getMeetingToken({ meetingId: meetingId, permission: 2 })
 	let surfaceType = SurfaceType.WHITEBOARD
 	let cameraId = cameraList[0].id
 
@@ -238,7 +239,6 @@ var meetingId = ""
 async function memoryInit() {
 	try {
 		let event = await xapi.Command.Macros.Macro.Get({ Content: "True", Name: "jibb_Storage" })
-		console.log(event)
 	} catch (e) {
 		console.log(e)
 		console.warn("Uh-Oh, no storage found, building jibb_Storage")
